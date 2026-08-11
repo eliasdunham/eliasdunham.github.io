@@ -1,5 +1,335 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="utf-8"><title>Elias Dunham</title></head>
-<body><h1>Elias Dunham</h1></body>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Elias Dunham | Mechanical Engineering &amp; Physics</title>
+<meta name="description" content="Elias Dunham, mechanical engineering and physics student at Northeastern University. Test apparatus design, materials characterization, and instrumentation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600&family=Newsreader:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="wordmark" href="/">Elias Dunham</a>
+  <nav aria-label="Primary">
+    <a href="#work">Work</a>
+    <a href="#focus">Focus</a>
+    <a href="resume.pdf">Résumé</a>
+    <a href="mailto:dunham.eli@northeastern.edu">Contact</a>
+  </nav>
+</header>
+
+<main>
+
+  <section class="hero">
+    <p class="eyebrow">Mechanical engineering and physics · Northeastern University · Class of 2028</p>
+    <h1>I build the apparatus that produces the measurement.</h1>
+    <p class="lede">
+      Most of my work starts where a standard test does not exist yet. At MIT's Lab for Translational
+      Engineering I designed and built a pressure-vessel rig to compare insulation materials under
+      simulated dive depth, then used it to benchmark candidate materials against the current standard.
+      I care about instrumentation, characterization, and getting a number out of a system that did not
+      previously give one.
+    </p>
+    <p class="hero-links">
+      <a href="resume.pdf">Résumé (PDF)</a>
+      <a href="https://github.com/eliasdunham">GitHub</a>
+      <a href="https://linkedin.com/in/elias-dunham">LinkedIn</a>
+      <a href="mailto:dunham.eli@northeastern.edu">dunham.eli@northeastern.edu</a>
+    </p>
+  </section>
+
+  <!-- ============================================================
+       FEATURED WORK
+       Two large tiles. These are your strongest pieces, so they get
+       the space. Swap which projects live here as your work changes.
+       ============================================================ -->
+  <section id="work" class="band">
+    <h2 class="section-head">Featured work</h2>
+
+    <div class="grid-featured">
+
+      <article class="card">
+        <a class="card-media" href="projects/thermal-rig.html">
+          <!-- Replace with img/thermal-rig.jpg — the labeled bench photo from your proposal works well here -->
+          <img src="img/thermal-rig.jpg" alt="Custom high-pressure thermal testing apparatus on a lab bench">
+        </a>
+        <p class="eyebrow">MIT Lab for Translational Engineering · Mar–Jun 2026</p>
+        <h3><a href="projects/thermal-rig.html">High-pressure thermal characterization apparatus</a></h3>
+        <p>
+          Designed and built a pressure-vessel test rig from scratch to compare insulation materials
+          under simulated depth, then benchmarked a phase-change material against standard neoprene.
+          The rig is now run by other lab members I trained.
+        </p>
+        <ul class="spec">
+          <li>45 psi max</li>
+          <li>104 fsw equivalent</li>
+          <li>3 trials per material</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <a class="card-media" href="projects/mixing-syringe.html">
+          <!-- Replace with img/mixing-syringe.jpg — an exploded Fusion render would be strong here -->
+          <img src="img/mixing-syringe.jpg" alt="Dual-barrel mixing syringe assembly">
+        </a>
+        <p class="eyebrow">MIT Lab for Translational Engineering · 2026</p>
+        <h3><a href="projects/mixing-syringe.html">In-situ mixing syringe</a></h3>
+        <p>
+          Dual-barrel syringe that keeps two formulation components separated until they combine at the
+          tip. Traced a persistent leak to stress concentration at the corners of a half-circle gasket
+          and redesigned the geometry to redistribute the sealing load.
+        </p>
+        <ul class="spec">
+          <li>11 design iterations</li>
+          <li>23G needle validated</li>
+          <li>SLA printed</li>
+        </ul>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       MORE WORK
+       Compact rows. Cheaper to add to, easier to scan, and demoting
+       a project here instead of deleting it is a good middle option.
+       Delete any <article class="row"> block you don't want.
+       ============================================================ -->
+  <section class="band">
+    <h2 class="section-head">More work</h2>
+
+    <div class="rows">
+
+      <article class="row">
+        <a class="row-media" href="projects/electrothermal-actuation.html">
+          <img src="img/electrothermal.jpg" alt="Shape-memory alloy and heater characterization setup">
+        </a>
+        <div class="row-body">
+          <p class="eyebrow">MIT Lab for Translational Engineering · 2026</p>
+          <h3><a href="projects/electrothermal-actuation.html">Electro-thermal actuation study</a></h3>
+          <p>
+            Characterization campaign across heater materials, power sources, and shape-memory alloy
+            springs to find a feasible self-powered actuator within pill-scale constraints. Diagnosed
+            and corrected a fixture-induced friction artifact that was corrupting the transition data.
+          </p>
+          <ul class="spec">
+            <li>Nitinol SMA</li>
+            <li>Silver-oxide cells</li>
+            <li>Joule-heating validated</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="row">
+        <a class="row-media" href="projects/delivery-catheter.html">
+          <img src="img/catheter.jpg" alt="Precision-manufactured catheter components">
+        </a>
+        <div class="row-body">
+          <p class="eyebrow">MIT Lab for Translational Engineering · 2026</p>
+          <h3><a href="projects/delivery-catheter.html">Cell delivery catheter</a></h3>
+          <p>
+            Found a taper in the central channel that was restricting flow, resolved it in a single
+            redesign, then precision-manufactured the complete device sets the team ran experiments on.
+          </p>
+          <ul class="spec">
+            <li>40 devices</li>
+            <li>320 parts</li>
+            <li>8 parts per assembly</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="row">
+        <a class="row-media" href="projects/stimulator-housing.html">
+          <img src="img/housing.jpg" alt="Clear resin electronics housing with snap-fit lid">
+        </a>
+        <div class="row-body">
+          <p class="eyebrow">MIT Lab for Translational Engineering · Feb–Apr 2026</p>
+          <h3><a href="projects/stimulator-housing.html">Wearable stimulator housing</a></h3>
+          <p>
+            Clear-resin enclosure for an active stimulator carried on a live animal during in-vivo
+            trials, contoured for wearability and sealed against fluid ingress through tolerance work
+            on the wire ports and snap-fit lid.
+          </p>
+          <ul class="spec">
+            <li>~15 iterations</li>
+            <li>Snap-fit seal</li>
+            <li>Clear SLA resin</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="row">
+        <a class="row-media" href="projects/composite-characterization.html">
+          <img src="img/composites.jpg" alt="Polymer composite test samples">
+        </a>
+        <div class="row-body">
+          <p class="eyebrow">MIT Lab for Translational Engineering · 2026</p>
+          <h3><a href="projects/composite-characterization.html">Polymer composite characterization</a></h3>
+          <p>
+            Fabricated and hardness-tested microsphere and LDPE composites across formulations,
+            systematically tuning pre-heat temperature, dwell time, and mold release to get consistent,
+            defect-free samples. Designed the temperature-resistant molds through five revisions.
+          </p>
+          <ul class="spec">
+            <li>7 ratios</li>
+            <li>3 sphere sizes</li>
+            <li>~30 samples</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="row">
+        <a class="row-media" href="projects/sanitization-system.html">
+          <img src="img/sanitization.jpg" alt="Spring-actuated rinsing nozzle assembly">
+        </a>
+        <div class="row-body">
+          <p class="eyebrow">MIT Lab for Translational Engineering · Jan–Feb 2026</p>
+          <h3><a href="projects/sanitization-system.html">Surgical tool rinsing system</a></h3>
+          <p>
+            Spring-actuated jet that uses capillary restriction to deliver a high-velocity rinse for
+            clearing biological debris from instruments without a powered pump.
+          </p>
+          <ul class="spec">
+            <li>Manual actuation</li>
+            <li>Spring-loaded nozzle</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="row">
+        <a class="row-media" href="projects/flx-testbed.html">
+          <img src="img/flx.jpg" alt="Embedded hardware testbed with wiring documentation">
+        </a>
+        <div class="row-body">
+          <p class="eyebrow">FLX Solutions · Jun–Aug 2025</p>
+          <h3><a href="projects/flx-testbed.html">Hardware testbed and automation tools</a></h3>
+          <p>
+            Duplicated the company's embedded-software test bench, cataloging sensors and power
+            components and producing the wiring documentation. Also built an OCR pipeline that turned
+            handwritten shop notes into a searchable database.
+          </p>
+          <ul class="spec">
+            <li>Python</li>
+            <li>JavaScript</li>
+            <li>Microsoft TrOCR</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="row">
+        <a class="row-media" href="projects/fan-blade.html">
+          <img src="img/fan-blade.jpg" alt="Biomimetic fan blade based on owl wing geometry">
+        </a>
+        <div class="row-body">
+          <p class="eyebrow">Northeastern University · Jan–Mar 2025</p>
+          <h3><a href="projects/fan-blade.html">Biomimetic fan blade</a></h3>
+          <p>
+            Blade geometry derived from owl wing mechanics, optimized in SolidWorks flow simulation to
+            reduce turbulence noise against a standard baseline.
+          </p>
+          <ul class="spec">
+            <li>30% noise reduction</li>
+            <li>SolidWorks flow sim</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="row">
+        <a class="row-media" href="projects/motion-tracker.html">
+          <img src="img/motion-tracker.jpg" alt="Wearable motion tracking device housing with sensors">
+        </a>
+        <div class="row-body">
+          <p class="eyebrow">Northeastern University · Nov–Dec 2024</p>
+          <h3><a href="projects/motion-tracker.html">Motion tracker</a></h3>
+          <p>
+            Wearable acceleration and velocity tracker for horse racing. Designed the housing, integrated
+            the sensors, and wrote the validation scripts that checked output against commercial units.
+          </p>
+          <ul class="spec">
+            <li>Under 5% deviation</li>
+            <li>Arduino</li>
+            <li>FDM printed</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Candidate for cutting. Solid work, but it sits well below everything above it.
+           Delete this block once the rest of the page is filled in. -->
+      <article class="row">
+        <a class="row-media" href="projects/purifier-mount.html">
+          <img src="img/purifier-mount.jpg" alt="Sink-mounted bracket for a water purifier">
+        </a>
+        <div class="row-body">
+          <p class="eyebrow">MIT Lab for Translational Engineering · Jan 2026</p>
+          <h3><a href="projects/purifier-mount.html">Water purifier mount</a></h3>
+          <p>
+            Sink-mount bracket for an unsecured water purifier. Identified the moment created by the
+            activation button as the governing constraint and iterated two prototypes to a stable design.
+          </p>
+          <ul class="spec">
+            <li>2 prototypes</li>
+            <li>Fusion 360</li>
+          </ul>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="focus" class="band">
+    <h2 class="section-head">Focus</h2>
+    <div class="focus">
+      <p>
+        The through-line in my work is instrumentation under conditions that break ordinary
+        measurement: pressure, temperature, tight volume budgets. I am most interested in extending
+        that toward experimental physics and aerospace, where the hard part is usually building the
+        thing that lets you observe the system at all.
+      </p>
+      <p>
+        I am currently looking for a co-op or research position where I can keep designing test
+        hardware and characterizing materials.
+      </p>
+    </div>
+  </section>
+
+  <section class="band">
+    <h2 class="section-head">Capabilities</h2>
+    <dl class="skills">
+      <div>
+        <dt>Design</dt>
+        <dd>SolidWorks, Autodesk Fusion, AutoCAD, flow simulation, GD&amp;T basics</dd>
+      </div>
+      <div>
+        <dt>Fabrication</dt>
+        <dd>SLA, FDM, PolyJet, PµSL printing, 3- and 5-axis CNC mill, laser cutting, manual injection molding, vacuum compression molding</dd>
+      </div>
+      <div>
+        <dt>Test and instrumentation</dt>
+        <dd>PID control systems, thermocouple calibration, digital multimeter logging, Instron and ADMET mechanical testing, hydraulic press, plasma cleaner, oscilloscopes</dd>
+      </div>
+      <div>
+        <dt>Programming</dt>
+        <dd>Python, MATLAB, C++, JavaScript, Arduino</dd>
+      </div>
+    </dl>
+  </section>
+
+</main>
+
+<footer>
+  <p class="footer-name">Elias Dunham</p>
+  <p class="footer-links">
+    <a href="mailto:dunham.eli@northeastern.edu">dunham.eli@northeastern.edu</a>
+    <a href="https://linkedin.com/in/elias-dunham">LinkedIn</a>
+    <a href="https://github.com/eliasdunham">GitHub</a>
+    <a href="resume.pdf">Résumé</a>
+  </p>
+</footer>
+
+</body>
 </html>

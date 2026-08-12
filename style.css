@@ -23,6 +23,10 @@
   --page:    1140px;       /* max content width */
   --gutter:  clamp(1.25rem, 4vw, 3.5rem);
 
+  /* Width of the project image column. Change this one number and every
+     project photo resizes together, keeping its own proportions. */
+  --media-w: 320px;
+
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -319,47 +323,66 @@ footer {
 
 /* --------------------------------------------------------------------------
    Portfolio — project blocks
-   Images sit above the text at their own natural aspect ratio. Nothing is
-   cropped to fit a frame, so no padding or border is ever needed: the only
-   space around a photo is the page background.
+   Media sits in a left column, text on the right. Images fill the column
+   width at their own natural aspect ratio, so nothing is cropped to fit a
+   frame and no padding or border is ever drawn.
+   --media-w controls the column width for every project at once.
    -------------------------------------------------------------------------- */
 
-.proj { margin: 0; }
+.proj {
+  display: grid;
+  grid-template-columns: var(--media-w) minmax(0, 1fr);
+  gap: clamp(1.5rem, 3vw, 2.75rem);
+  margin: 0;
+}
+
+/* Projects with no photograph: text spans the full width. */
+.proj-wide { grid-template-columns: minmax(0, 1fr); }
 
 .proj + .proj {
-  margin-top: 3.25rem;
-  padding-top: 3.25rem;
+  margin-top: 2.75rem;
+  padding-top: 2.75rem;
   border-top: 1px solid var(--rule);
 }
 
 .proj h2 {
-  margin: 0.5rem 0 0;
+  margin: 0.5rem 0 0.75rem;
   font-family: var(--display);
-  font-size: clamp(1.375rem, 2.6vw, 1.75rem);
+  font-size: 1.375rem;
   font-weight: 600;
-  line-height: 1.15;
-  letter-spacing: -0.02em;
+  line-height: 1.2;
+  letter-spacing: -0.018em;
 }
 
-/* Media strip. Set --h per project in the HTML to control display height;
-   every image in the strip is drawn at that height at its own ratio. */
+/* Default: images fill the column and stack vertically. */
 .media {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  gap: 0.75rem;
-  margin: 1.5rem 0 1.75rem;
+  display: grid;
+  gap: 0.6rem;
+  align-content: start;
 }
 
 .media img {
-  height: var(--h, 360px);
-  width: auto;
-  max-width: 100%;
+  width: 100%;
+  height: auto;
   border-radius: 3px;
   transition: transform 400ms ease;
 }
 
-.proj p:not(.eyebrow):not(.proj-note) {
+/* Modifier for tall photos: place them side by side at a shared height
+   set by --h in the HTML, rather than stacking them full width. */
+.media.side {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.media.side img {
+  width: auto;
+  height: var(--h, 240px);
+  max-width: 100%;
+}
+
+.proj-body p:not(.eyebrow):not(.proj-note) {
   max-width: var(--measure);
   margin: 0;
   color: var(--ink-2);
@@ -603,8 +626,10 @@ footer {
 }
 
 @media (max-width: 700px) {
-  /* On phones let every image go full width and stack. */
-  .media img { height: auto; width: 100%; }
+  /* On phones the media moves above the text and images go full width. */
+  .proj { grid-template-columns: minmax(0, 1fr); gap: 1.25rem; }
+  .media.side img { height: auto; width: 100%; }
+  .media.side { display: grid; gap: 0.6rem; }
   .entry-meta { white-space: normal; }
 }
 

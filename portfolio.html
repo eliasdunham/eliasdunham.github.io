@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Portfolio | Elias Dunham</title>
-<meta name="description" content="Engineering projects by Elias Dunham: test apparatus design, device development, polymer composites, and instrumentation.">
+<meta name="description" content="Engineering projects: high-pressure thermal test apparatus, medical device design, polymer composites, and instrumentation.">
 <link rel="canonical" href="https://eliasdunham.github.io/portfolio.html">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 
@@ -52,190 +52,176 @@
   </section>
 
   <!-- ============================================================
-       Every project is one <article class="row"> block.
-       Delete a block to remove a project. Move a block to reorder.
-       The <p class="proj-note"> line is the confidentiality tag.
-       Add or remove it per project as needed.
+       Each project is one <article class="proj"> block.
+       Delete a block to remove it. Move a block to reorder.
+
+       IMAGES: the --h value on <div class="media"> sets the display
+       height in pixels. Every image in that row is drawn at that
+       height at its own natural aspect ratio, so nothing is cropped.
+       Two images side by side is fine; keep the combined width under
+       about 1100px or they will wrap.
        ============================================================ -->
   <section class="band">
-    <div class="rows">
 
-      <article class="row">
-        <div class="row-media">
-          <img src="thermal-rig.jpg" alt="Custom high-pressure thermal testing apparatus on a lab bench">
-        </div>
-        <div class="row-body">
-          <p class="eyebrow">MIT Lab for Translational Engineering · Mar–Jun 2026</p>
-          <h2>High-pressure thermal characterization apparatus</h2>
-          <p>
-            Designed and built a pressure-vessel test rig from scratch to compare insulation materials
-            under simulated depth. Integrated a PID-controlled heating element, digital multimeter
-            logging, and electrical feedthroughs that hold seal under pressurization, then established
-            the standardized protocol for pressurization, thermal conditioning, and cool-down
-            measurement. Benchmarked a phase-change material against standard neoprene. The rig is now
-            run by other lab members I trained.
-          </p>
-          <ul class="spec">
-            <li>45 psi max</li>
-            <li>104 fsw equivalent</li>
-            <li>3 trials per material</li>
-          </ul>
-          <p class="proj-note">Details limited pending publication. Happy to discuss directly.</p>
-        </div>
-      </article>
+    <article class="proj">
+      <p class="eyebrow">MIT Lab for Translational Engineering · Mar–Jun 2026</p>
+      <h2>High-pressure thermal characterization apparatus</h2>
+      <div class="media" style="--h: 400px">
+        <img src="thermal-rig.jpg" alt="Custom high-pressure thermal testing apparatus with labeled pressure vessel, air compressor, digital multimeter, and PID controller">
+      </div>
+      <p>
+        Designed and built a pressure-vessel test rig from scratch to compare insulation materials under
+        simulated depth. Integrated a PID-controlled heating element, digital multimeter logging, and
+        electrical feedthroughs that hold seal under pressurization, then established the standardized
+        protocol for pressurization, thermal conditioning, and cool-down measurement. Benchmarked a
+        phase-change material against standard neoprene. The rig is now run by other lab members I
+        trained.
+      </p>
+      <ul class="spec">
+        <li>45 psi max</li>
+        <li>104 fsw equivalent</li>
+        <li>3 trials per material</li>
+      </ul>
+      <p class="proj-note">Details limited pending publication. Happy to discuss directly.</p>
+    </article>
 
-      <article class="row">
-        <div class="row-media">
-          <img src="mixing-syringe.jpg" alt="Dual-barrel mixing syringe assembly">
-        </div>
-        <div class="row-body">
-          <p class="eyebrow">MIT Lab for Translational Engineering · 2026</p>
-          <h2>In-situ mixing syringe</h2>
-          <p>
-            Dual-barrel syringe that keeps two formulation components isolated until they combine at the
-            tip. Modeled the barrel, plunger, and gaskets in Fusion 360 and configured the tip geometry
-            to confine mixing to the outlet. Traced a persistent leak to stress concentration at the
-            corners of a half-circle gasket rather than treating it as an unavoidable defect, then
-            revised the geometry to redistribute the sealing load.
-          </p>
-          <ul class="spec">
-            <li>11 design iterations</li>
-            <li>23G needle validated</li>
-            <li>SLA printed</li>
-          </ul>
-          <p class="proj-note">Details limited pending publication. Happy to discuss directly.</p>
-        </div>
-      </article>
+    <article class="proj">
+      <p class="eyebrow">MIT Lab for Translational Engineering · 2026</p>
+      <h2>In-situ mixing syringe</h2>
+      <div class="media" style="--h: 540px">
+        <img src="mixing-syringe-2.jpg" alt="Dual-barrel syringe held in a gloved hand, blue and yellow components sitting separately in adjacent chambers">
+        <img src="mixing-syringe.jpg" alt="The same syringe dispensing combined green fluid into a glass vial, showing the components mixing only at the tip">
+      </div>
+      <p>
+        Dual-barrel syringe that keeps two formulation components isolated until they combine at the tip.
+        Modeled the barrel, plunger, and gaskets in Fusion 360 and configured the tip geometry to confine
+        mixing to the outlet. Traced a persistent leak to stress concentration at the corners of a
+        half-circle gasket rather than treating it as an unavoidable defect, then revised the geometry to
+        redistribute the sealing load.
+      </p>
+      <ul class="spec">
+        <li>11 design iterations</li>
+        <li>23G needle validated</li>
+        <li>SLA printed</li>
+      </ul>
+      <p class="proj-note">Details limited pending publication. Happy to discuss directly.</p>
+    </article>
 
-      <!-- Text-only row: no photograph exists for this project.
-           Add a <div class="row-media"> block and remove the row-textonly
-           class if you shoot one later. -->
-      <article class="row row-textonly">
-        <div class="row-body">
-          <p class="eyebrow">MIT Lab for Translational Engineering · 2026</p>
-          <h2>Electro-thermal actuation study</h2>
-          <p>
-            Characterization campaign across heater materials, power sources, and shape-memory alloy
-            components to define the feasible power envelope for a millimeter-scale actuator. Built a
-            controlled thermal-bath setup to measure alloy activation temperatures, then diagnosed and
-            corrected a fixture-induced friction artifact that was corrupting the transition data.
-            Mapped nichrome resistance against power across lengths and voltages and validated the
-            results against Joule-heating theory.
-          </p>
-          <ul class="spec">
-            <li>Nitinol SMA</li>
-            <li>Silver-oxide cells</li>
-            <li>Joule-heating validated</li>
-          </ul>
-          <p class="proj-note">Details limited pending publication. Happy to discuss directly.</p>
-        </div>
-      </article>
+    <!-- No photograph exists for this project. -->
+    <article class="proj">
+      <p class="eyebrow">MIT Lab for Translational Engineering · 2026</p>
+      <h2>Electro-thermal actuation study</h2>
+      <p>
+        Characterization campaign across heater materials, power sources, and shape-memory alloy
+        components to define the feasible power envelope for a millimeter-scale actuator. Built a
+        controlled thermal-bath setup to measure alloy activation temperatures, then diagnosed and
+        corrected a fixture-induced friction artifact that was corrupting the transition data. Mapped
+        nichrome resistance against power across lengths and voltages and validated the results against
+        Joule-heating theory.
+      </p>
+      <ul class="spec">
+        <li>Nitinol SMA</li>
+        <li>Silver-oxide cells</li>
+        <li>Joule-heating validated</li>
+      </ul>
+      <p class="proj-note">Details limited pending publication. Happy to discuss directly.</p>
+    </article>
 
-      <article class="row">
-        <div class="row-media contain">
-          <img src="catheter.jpg" alt="Precision-manufactured catheter components laid out">
-        </div>
-        <div class="row-body">
-          <p class="eyebrow">MIT Lab for Translational Engineering · 2026</p>
-          <h2>Cell delivery catheter</h2>
-          <p>
-            Redesigned and precision-manufactured catheter components for intravenous delivery. Found a
-            taper in the central channel creating a fluidic bottleneck, resolved it in a single redesign
-            to restore consistent channel diameter, and confirmed improved flow. Then produced the
-            complete device sets the team ran experiments on, using a 3D printer and a rotary axis on a
-            laser cutter to hit the required tolerances.
-          </p>
-          <ul class="spec">
-            <li>40 devices</li>
-            <li>320 parts</li>
-            <li>8 parts per assembly</li>
-          </ul>
-        </div>
-      </article>
+    <article class="proj">
+      <p class="eyebrow">MIT Lab for Translational Engineering · 2026</p>
+      <h2>Cell delivery catheter</h2>
+      <div class="media" style="--h: 150px">
+        <img src="catheter.jpg" alt="Precision-manufactured clear catheter showing the tapered tip and luer hub">
+      </div>
+      <p>
+        Redesigned and precision-manufactured catheter components for intravenous delivery. Found a taper
+        in the central channel creating a fluidic bottleneck, resolved it in a single redesign to restore
+        consistent channel diameter, and confirmed improved flow. Then produced the complete device sets
+        the team ran experiments on, using a 3D printer and a rotary axis on a laser cutter to hit the
+        required tolerances.
+      </p>
+      <ul class="spec">
+        <li>40 devices</li>
+        <li>320 parts</li>
+        <li>8 parts per assembly</li>
+      </ul>
+    </article>
 
-      <article class="row">
-        <div class="row-media">
-          <img src="housing.jpg" alt="Clear resin electronics housing with snap-fit lid">
-        </div>
-        <div class="row-body">
-          <p class="eyebrow">MIT Lab for Translational Engineering · Feb–Apr 2026</p>
-          <h2>Wearable stimulator housing</h2>
-          <p>
-            Independently designed and fabricated a clear-resin enclosure for an active stimulator
-            carried on a live animal during in-vivo trials. Contoured the geometry to the animal's back
-            for wearability and dialed in tight tolerances around the wire ports and a snap-fit lid to
-            resolve fluid ingress. Specified clear resin so the board stayed visible for inspection. The
-            housing stayed sealed and functional throughout trials.
-          </p>
-          <ul class="spec">
-            <li>~15 iterations</li>
-            <li>Snap-fit seal</li>
-            <li>Clear SLA resin</li>
-          </ul>
-        </div>
-      </article>
+    <article class="proj">
+      <p class="eyebrow">MIT Lab for Translational Engineering · Feb–Apr 2026</p>
+      <h2>Wearable stimulator housing</h2>
+      <div class="media" style="--h: 400px">
+        <img src="housing.jpg" alt="Clear resin electronics housing with a sealed multi-pin wire port and snap-fit lid">
+      </div>
+      <p>
+        Independently designed and fabricated a clear-resin enclosure for an active stimulator carried on
+        a live animal during in-vivo trials. Contoured the geometry to the animal's back for wearability
+        and dialed in tight tolerances around the wire ports and a snap-fit lid to resolve fluid ingress.
+        Specified clear resin so the board stayed visible for inspection. The housing stayed sealed and
+        functional throughout trials.
+      </p>
+      <ul class="spec">
+        <li>~15 iterations</li>
+        <li>Snap-fit seal</li>
+        <li>Clear SLA resin</li>
+      </ul>
+    </article>
 
-      <!-- Text-only row: no photograph exists for this project. -->
-      <article class="row row-textonly">
-        <div class="row-body">
-          <p class="eyebrow">MIT Lab for Translational Engineering · 2026</p>
-          <h2>Polymer composite characterization</h2>
-          <p>
-            Calculated filler-to-polymer ratios and fabricated a controlled sample set spanning seven
-            formulations and three particle sizes. Optimized the process to produce consistent,
-            defect-free parts by comparing material extrusion against injection molding and tuning
-            pre-heat temperature, dwell time, and mold-release strategy. Designed and printed
-            temperature-resistant molds across five revisions, then hardness-tested every formulation.
-          </p>
-          <ul class="spec">
-            <li>7 ratios</li>
-            <li>3 particle sizes</li>
-            <li>~30 samples</li>
-          </ul>
-          <p class="proj-note">Details limited pending publication. Happy to discuss directly.</p>
-        </div>
-      </article>
+    <!-- No photograph exists for this project. -->
+    <article class="proj">
+      <p class="eyebrow">MIT Lab for Translational Engineering · 2026</p>
+      <h2>Polymer composite characterization</h2>
+      <p>
+        Calculated filler-to-polymer ratios and fabricated a controlled sample set spanning seven
+        formulations and three particle sizes. Optimized the process to produce consistent, defect-free
+        parts by comparing material extrusion against injection molding and tuning pre-heat temperature,
+        dwell time, and mold-release strategy. Designed and printed temperature-resistant molds across
+        five revisions, then hardness-tested every formulation.
+      </p>
+      <ul class="spec">
+        <li>7 ratios</li>
+        <li>3 particle sizes</li>
+        <li>~30 samples</li>
+      </ul>
+      <p class="proj-note">Details limited pending publication. Happy to discuss directly.</p>
+    </article>
 
-      <article class="row">
-        <div class="row-media">
-          <img src="fan-blade.jpg" alt="Biomimetic fan blade based on owl wing geometry">
-        </div>
-        <div class="row-body">
-          <p class="eyebrow">Northeastern University · Jan–Mar 2025</p>
-          <h2>Biomimetic fan blade</h2>
-          <p>
-            Fan blade geometry derived from the mechanics of owl wings, aimed at reducing turbulence and
-            noise for drone and HVAC applications. Optimized the profile in SolidWorks using flow
-            simulation, reaching a 30% noise reduction against a standard baseline design.
-          </p>
-          <ul class="spec">
-            <li>30% noise reduction</li>
-            <li>SolidWorks flow sim</li>
-          </ul>
-        </div>
-      </article>
+    <article class="proj">
+      <p class="eyebrow">Northeastern University · Jan–Mar 2025</p>
+      <h2>Biomimetic fan blade</h2>
+      <div class="media" style="--h: 430px">
+        <img src="fan-blade.jpg" alt="Three-bladed biomimetic fan mounted on a laser-cut test housing">
+      </div>
+      <p>
+        Fan blade geometry derived from the mechanics of owl wings, aimed at reducing turbulence and noise
+        for drone and HVAC applications. Optimized the profile in SolidWorks using flow simulation,
+        reaching a 30% noise reduction against a standard baseline design.
+      </p>
+      <ul class="spec">
+        <li>30% noise reduction</li>
+        <li>SolidWorks flow sim</li>
+      </ul>
+    </article>
 
-      <article class="row">
-        <div class="row-media">
-          <img src="motion-tracker.jpg" alt="Wearable motion tracking device housing with sensors">
-        </div>
-        <div class="row-body">
-          <p class="eyebrow">Northeastern University · Nov–Dec 2024</p>
-          <h2>Motion tracker</h2>
-          <p>
-            Wearable device measuring acceleration and velocity in horse racing. Designed and fabricated
-            the housing in SolidWorks and FDM print, integrated the sensors with Arduino, and wrote the
-            MATLAB validation scripts that checked output against commercial units.
-          </p>
-          <ul class="spec">
-            <li>Under 5% deviation</li>
-            <li>Arduino</li>
-            <li>FDM printed</li>
-          </ul>
-        </div>
-      </article>
+    <article class="proj">
+      <p class="eyebrow">Northeastern University · Nov–Dec 2024</p>
+      <h2>Motion tracker</h2>
+      <div class="media" style="--h: 310px">
+        <img src="motion-tracker.jpg" alt="Assembled motion tracker displaying live acceleration and velocity readings on an LCD">
+        <img src="motion-tracker-2.jpg" alt="Interior of the motion tracker showing the microcontroller, breadboard, and sensor wiring">
+      </div>
+      <p>
+        Wearable device measuring acceleration and velocity in horse racing. Designed and fabricated the
+        housing in SolidWorks and FDM print, integrated the sensors with Arduino, and wrote the MATLAB
+        validation scripts that checked output against commercial units.
+      </p>
+      <ul class="spec">
+        <li>Under 5% deviation</li>
+        <li>Arduino</li>
+        <li>FDM printed</li>
+      </ul>
+    </article>
 
-    </div>
   </section>
 
 </main>

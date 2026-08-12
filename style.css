@@ -26,8 +26,8 @@
   /* Project image sizing. Change these two and every project row follows.
      --media-w  how wide the photo column is
      --media-ar the frame shape; 3/2 matches the image files as supplied */
-  --media-w:  100px;
-  --media-ar: 3 / 2;
+  --media-w:  400px;
+  --media-ar: 16 / 9;
 }
 
 *, *::before, *::after { box-sizing: border-box; }

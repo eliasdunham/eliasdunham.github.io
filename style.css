@@ -22,6 +22,12 @@
   --measure: 62ch;         /* max line length for prose */
   --page:    1140px;       /* max content width */
   --gutter:  clamp(1.25rem, 4vw, 3.5rem);
+
+  /* Project image sizing. Change these two and every project row follows.
+     --media-w  how wide the photo column is
+     --media-ar the frame shape; 3/2 matches the image files as supplied */
+  --media-w:  340px;
+  --media-ar: 3 / 2;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -324,7 +330,7 @@ footer {
 
 .row {
   display: grid;
-  grid-template-columns: 240px 1fr;
+  grid-template-columns: var(--media-w) 1fr;
   gap: clamp(1.25rem, 3vw, 2.5rem);
   padding-block: 2.5rem;
   margin: 0;
@@ -338,7 +344,7 @@ footer {
 .row-textonly { grid-template-columns: 1fr; }
 
 .row-media {
-  aspect-ratio: 4 / 3;
+  aspect-ratio: var(--media-ar);
   overflow: hidden;
   background: var(--rule);
   border-radius: 3px;
@@ -351,6 +357,10 @@ footer {
   background: var(--rule);
   transition: transform 400ms ease;
 }
+
+/* For long thin objects: show the whole thing instead of cropping.
+   Add class="row-media contain" on the wrapper. */
+.row-media.contain img { object-fit: contain; }
 
 .row-body h2 {
   margin: 0.5rem 0 0.65rem;
@@ -605,7 +615,7 @@ footer {
 
 @media (max-width: 620px) {
   .row { grid-template-columns: 1fr; gap: 1.25rem; }
-  .row-media { max-width: 320px; }
+  .row-media { max-width: var(--media-w); }
   .entry-meta { white-space: normal; }
 }
 

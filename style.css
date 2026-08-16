@@ -366,7 +366,9 @@ footer {
   align-content: start;
 }
 
-.media img {
+.media img,
+.media video {
+  display: block;
   width: var(--w, 100%);
   height: auto;
   max-width: 100%;
@@ -635,7 +637,7 @@ footer {
 @media (max-width: 700px) {
   /* On phones the media moves above the text and images go full width. */
   .proj { grid-template-columns: minmax(0, 1fr); gap: 1.25rem; }
-  .media.side img { height: auto; width: 100%; }
+  .media.side img, .media.side video { height: auto; width: 100%; }
   .media.side { display: grid; gap: 0.6rem; }
   .entry-meta { white-space: normal; }
 }

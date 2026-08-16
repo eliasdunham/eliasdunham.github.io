@@ -158,7 +158,9 @@
 
     <article class="proj">
       <div class="media">
-        <img src="fan-blade.jpg" alt="Three-bladed biomimetic fan mounted on a laser-cut test housing">
+        <video src="fan-test.mp4" poster="fan-test-poster.jpg"
+               autoplay loop muted playsinline preload="metadata"
+               aria-label="The biomimetic fan blade running on its laser-cut test housing"></video>
       </div>
       <div class="proj-body">
         <p class="eyebrow">Northeastern University · Jan–Mar 2025</p>
@@ -232,5 +234,15 @@
   </p>
 </footer>
 
+
+<script>
+if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  document.querySelectorAll('video[autoplay]').forEach(function (v) {
+    v.removeAttribute('autoplay');
+    v.setAttribute('controls', '');
+    v.pause();
+  });
+}
+</script>
 </body>
 </html>

@@ -9,7 +9,6 @@
 <link rel="canonical" href="https://eliasdunham.github.io/portfolio.html">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 
-<!-- Link preview cards (LinkedIn, iMessage, Slack, email, Twitter/X) -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Elias Dunham">
 <meta property="og:title" content="Portfolio | Elias Dunham">
@@ -48,19 +47,6 @@
     <h1>Portfolio</h1>
   </section>
 
-  <!-- ============================================================
-       Each project is one <article> block.
-       Delete a block to remove it. Move a block to reorder.
-
-       WITH a photo:    <article class="proj">      media div first
-       WITHOUT a photo: <article class="proj proj-wide">  no media div
-
-       IMAGES sit in a left column whose width is --media-w in
-       style.css. By default each image fills that column width at its
-       own natural aspect ratio, and multiple images stack vertically.
-       Add class="media side" plus style="--h: NNNpx" for tall photos
-       that would otherwise run too long.
-       ============================================================ -->
   <section class="band">
 
     <article class="proj">
@@ -76,7 +62,7 @@
           logging, and electrical feedthroughs that hold seal under pressurization, then established
           the standardized protocol for pressurization, thermal conditioning, and cool-down
           measurement. Used the rig to benchmark experimental insulation materials against the current
-          industry standard. It is now run by other lab members I trained.
+          industry standard, and trained other lab members to operate the apparatus independently.
         </p>
         <ul class="spec">
           <li>104 fsw equivalent</li>
@@ -108,53 +94,14 @@
       </div>
     </article>
 
-    <article class="proj proj-wide">
-      <div class="proj-body">
-        <p class="eyebrow">MIT Lab for Translational Engineering · 2026</p>
-        <h2>Electro-thermal actuation study</h2>
-        <p>
-          Characterization campaign across heater materials, power sources, and shape-memory alloy
-          components to define the feasible power envelope for a millimeter-scale actuator. Built a
-          controlled thermal-bath setup to measure alloy activation temperatures, then diagnosed and
-          corrected a fixture-induced friction artifact that was corrupting the transition data. Mapped
-          nichrome resistance against power across lengths and voltages and validated the results
-          against Joule-heating theory.
-        </p>
-        <ul class="spec">
-          <li>Nitinol SMA</li>
-          <li>Silver-oxide cells</li>
-          <li>Joule-heating validated</li>
-        </ul>
-        <p class="proj-note">Details limited pending publication.</p>
-      </div>
-    </article>
-
-    <article class="proj proj-wide">
-      <div class="proj-body">
-        <p class="eyebrow">MIT Lab for Translational Engineering · 2026</p>
-        <h2>Cell delivery catheter</h2>
-        <p>
-          Refined and precision-manufactured catheter components for intravenous delivery. Redesigned
-          the central channel to eliminate a fluidic bottleneck and confirmed improved flow. Then produced
-          the complete device sets the team ran experiments on, using a 3D printer and a rotary axis on a
-          laser cutter to hit the required tolerances.
-        </p>
-        <ul class="spec">
-          <li>40 devices</li>
-          <li>320 parts</li>
-          <li>8 parts per assembly</li>
-        </ul>
-      </div>
-    </article>
-
     <article class="proj">
       <div class="media">
-        <img src="motion-tracker.jpg" alt="Assembled motion tracker displaying live acceleration and velocity readings on an LCD">
+        <img src="motion-tracker.jpg" alt="Assembled horse racing motion tracker displaying live acceleration and velocity readings on an LCD">
         <img src="motion-tracker-2.jpg" alt="Interior of the motion tracker showing the microcontroller, breadboard, and sensor wiring">
       </div>
       <div class="proj-body">
         <p class="eyebrow">Northeastern University · Nov–Dec 2024</p>
-        <h2>Motion tracker</h2>
+        <h2>Horse racing motion tracker</h2>
         <p>
           Wearable device measuring acceleration and velocity in horse racing. Drew the cut geometry in
           AutoCAD and laser cut the housing panels, integrated the sensors with Arduino, and wrote the
@@ -211,6 +158,45 @@
           <li>30% noise reduction</li>
           <li>Surface ridges</li>
           <li>SolidWorks flow sim</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="proj proj-wide">
+      <div class="proj-body">
+        <p class="eyebrow">MIT Lab for Translational Engineering · 2026</p>
+        <h2>Electro-thermal actuation study</h2>
+        <p>
+          Characterization campaign across heater materials, power sources, and shape-memory alloy
+          components to define the feasible power envelope for a millimeter-scale actuator. Built a
+          controlled thermal-bath setup to measure alloy activation temperatures, then diagnosed and
+          corrected a fixture-induced friction artifact that was corrupting the transition data. Mapped
+          nichrome resistance against power across lengths and voltages and validated the results
+          against Joule-heating theory.
+        </p>
+        <ul class="spec">
+          <li>Nitinol SMA</li>
+          <li>Silver-oxide cells</li>
+          <li>Joule-heating validated</li>
+        </ul>
+        <p class="proj-note">Details limited pending publication.</p>
+      </div>
+    </article>
+
+    <article class="proj proj-wide">
+      <div class="proj-body">
+        <p class="eyebrow">MIT Lab for Translational Engineering · 2026</p>
+        <h2>Cell delivery catheter</h2>
+        <p>
+          Refined and precision-manufactured catheter components for intravenous delivery. Redesigned
+          the central channel to eliminate a fluidic bottleneck and confirmed improved flow. Then produced
+          the complete device sets the team ran experiments on, using a 3D printer and a rotary axis on a
+          laser cutter to hit the required tolerances.
+        </p>
+        <ul class="spec">
+          <li>40 devices</li>
+          <li>320 parts</li>
+          <li>8 parts per assembly</li>
         </ul>
       </div>
     </article>

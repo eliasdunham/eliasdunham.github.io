@@ -336,7 +336,7 @@ footer {
 
 .proj {
   display: grid;
-  grid-template-columns: var(--media-w) minmax(0, 1fr);
+  grid-template-columns: var(--col, var(--media-w)) minmax(0, 1fr);
   gap: clamp(1.5rem, 3vw, 2.75rem);
   margin: 0;
 }
@@ -367,8 +367,9 @@ footer {
 }
 
 .media img {
-  width: 100%;
+  width: var(--w, 100%);
   height: auto;
+  max-width: 100%;
   border-radius: 3px;
   transition: transform 400ms ease;
 }

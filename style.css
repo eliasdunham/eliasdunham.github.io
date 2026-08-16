@@ -6,18 +6,20 @@
    ========================================================================== */
 
 :root {
-  --paper:      #edf0f1;   /* page background, cool light gray */
-  --surface:    #ffffff;   /* cards and panels */
-  --ink:        #12171a;   /* headings and body */
-  --ink-2:      #57616a;   /* secondary text */
-  --ink-3:      #8a949b;   /* captions, metadata */
-  --rule:       #d2d9db;   /* hairlines and image placeholders */
-  --accent:     #0f5f6b;   /* spec strips, links, focus ring */
-  --accent-ink: #ffffff;   /* text on accent fills */
+  color-scheme: dark;
+
+  --paper:      #111315;   /* page background */
+  --surface:    #1c2023;   /* cards and panels */
+  --ink:        #f2f0ec;   /* headings and body */
+  --ink-2:      #a8aeb4;   /* secondary text */
+  --ink-3:      #878d93;   /* captions, metadata */
+  --rule:       #292e33;   /* hairlines and image placeholders */
+  --accent:     #e0a33c;   /* spec strips, links, focus ring */
+  --accent-ink: #14171a;   /* text on accent fills */
 
   --display: "Archivo", system-ui, sans-serif;
   --body:    "Newsreader", Georgia, serif;
-  --mono:    "IBM Plex Mono", ui-monospace, monospace;
+  --mono:    "JetBrains Mono", ui-monospace, monospace;
 
   --measure: 62ch;         /* max line length for prose */
   --page:    1140px;       /* max content width */
@@ -26,7 +28,6 @@
   /* Width of the project image column. Change this one number and every
      project photo resizes together, keeping its own proportions. */
   --media-w: 320px;
-
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -41,11 +42,15 @@ body {
   font-size: 1.0625rem;
   line-height: 1.65;
   font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 img { display: block; max-width: 100%; height: auto; }
 
 a { color: var(--accent); }
+
+a:hover { color: #efc077; }
 
 :focus-visible {
   outline: 2px solid var(--accent);
@@ -405,10 +410,11 @@ footer {
 .resume-view { max-width: 900px; }
 
 .pdf-frame {
-  background: var(--surface);
+  background: #ffffff;
   border: 1px solid var(--rule);
   border-radius: 3px;
   overflow: hidden;
+  padding: 10px;
 }
 
 .pdf-frame iframe {
@@ -422,9 +428,9 @@ footer {
 
 .pdf-fallback img {
   width: 100%;
-  border: 1px solid var(--rule);
+  border: 10px solid #ffffff;
   border-radius: 3px;
-  background: var(--surface);
+  background: #ffffff;
 }
 
 .pdf-fallback .proj-note { text-align: center; }

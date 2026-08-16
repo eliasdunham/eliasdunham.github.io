@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="10" fill="#0f5f6b"/>
-  <text x="32" y="33" fill="#ffffff"
+  <rect width="64" height="64" rx="10" fill="#111315"/>
+  <text x="32" y="33" fill="#e0a33c"
         font-family="Archivo, Helvetica, Arial, sans-serif"
         font-size="30" font-weight="600" letter-spacing="-1.2"
         text-anchor="middle" dominant-baseline="central">ED</text>

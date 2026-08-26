@@ -397,7 +397,9 @@ footer {
 }
 
 .proj-note {
-  margin: 0.85rem 0 0;
+  margin: 1.1rem 0 0;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--rule);
   max-width: var(--measure);
   font-family: var(--mono);
   font-size: 0.6875rem;

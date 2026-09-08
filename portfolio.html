@@ -25,7 +25,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600&family=Newsreader:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600&family=Instrument+Serif:ital@0;1&family=Newsreader:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -78,23 +78,22 @@
         <p class="eyebrow">MIT Lab for Translational Engineering · Mar 2026 – Present</p>
         <h2>High-pressure thermal characterization apparatus</h2>
         <p>
-          No apparatus existed to measure how candidate insulation materials behave at depth, so I
-          designed and built one: a pressure vessel with an internal heating element and thermocouples,
-          holding a sample at temperature under pressure while logging its heat loss.
+          No apparatus existed to measure how candidate insulation materials behave at depth. Bulk
+          conductivity data existed at atmospheric pressure and nowhere else, and it would not have
+          captured the interface a wetsuit actually sees between skin and cold water.
         </p>
         <p>
-          Routing heater power and thermocouple leads through the pressure boundary was the hard part.
-          Both had to survive submersion and pressurization, which impose different requirements, and
+          I designed and built a pressure vessel around that interface: a PID-controlled surface held at
+          37.2°C standing in for skin, the material under test, and water on the far side. Routing heater
+          power and thermocouple leads through the pressure boundary was the hard part, since
           waterproofing that holds at atmospheric pressure fails once water is forced into every seam. I
-          worked through several sealing approaches before epoxy-potting the feedthroughs, which held at
-          pressures equivalent to 104 fsw.
+          worked through several sealing approaches before epoxy-potting the feedthroughs.
         </p>
         <p>
-          I built the test stack around the interface a wetsuit actually sees rather than bulk
-          conductivity: a heated surface standing in for skin, the material under test, and water on the
-          far side. It runs submerged and dry, which separates insulating performance from degradation by
-          water intrusion. I wrote the pressurization, conditioning, and cool-down procedure and trained
-          other lab members to run it.
+          The apparatus holds pressures equivalent to 104 fsw and runs submerged or dry, which separates
+          insulating performance from degradation by water intrusion. I have used it to evaluate 24
+          candidate material formulations, and I wrote the pressurization, conditioning, and cool-down
+          procedure that four other lab members now run independently.
         </p>
       </div>
     </article>
@@ -107,14 +106,19 @@
         <p class="eyebrow">MIT Lab for Translational Engineering · Feb 2026 – Present</p>
         <h2>In-situ mixing syringe</h2>
         <p>
-          I modeled a dual-barrel syringe in Fusion 360, including the barrel, plunger, and gaskets, with
-          outlet geometry that confines mixing to the tip. Validated for delivery through a 23G needle.
+          A two-component formulation had to stay isolated until the moment of injection, which no
+          single-barrel syringe can do.
         </p>
         <p>
-          The prototypes had recurring leaks in the same locations rather than randomly, which
-          pointed at geometry rather than tolerance. I ran a stress concentration analysis on the sealing
-          interface and found load concentrating at discrete points, leaving most of the gasket unloaded.
-          Reshaping the interface to distribute sealing load eliminated the leak across eleven iterations.
+          I modeled a dual-barrel syringe in Fusion 360, including the barrel, plunger, and gaskets, with
+          outlet geometry confining mixing to the tip. The prototypes leaked, and the leak recurred in the
+          same locations rather than randomly, which pointed at geometry rather than tolerance. A stress
+          concentration analysis of the sealing interface showed load concentrating at discrete points and
+          leaving most of the gasket unloaded, so I reshaped the interface to distribute it.
+        </p>
+        <p>
+          Eleven SLA-printed iterations eliminated the leak. The device delivered through a 23G needle
+          across eight consecutive injection trials without failure.
         </p>
       </div>
     </article>
@@ -128,14 +132,18 @@
         <p class="eyebrow">Northeastern University · Nov–Dec 2024</p>
         <h2>Horse racing motion tracker</h2>
         <p>
-          I drew the enclosure geometry in AutoCAD, cut the panels on a laser cutter, and integrated an
-          accelerometer and LCD with an Arduino to read live acceleration and velocity for horse racing.
+          The task was to measure acceleration and velocity on a moving horse and display both live,
+          using a sensor whose raw output drifts.
         </p>
         <p>
-          Getting numbers I could trust took longer than building the hardware. Raw acceleration is noisy
-          and velocity has to be integrated from it, so uncorrected bias accumulates and the velocity
-          estimate drifts. I tuned the filtering and integration parameters against a commercial reference
-          sensor until the device tracked within 5% of it.
+          I drew the enclosure geometry in AutoCAD, cut the panels on a laser cutter, and integrated an
+          accelerometer and LCD with an Arduino. Getting numbers I could trust took longer than building
+          the hardware. Raw acceleration is noisy and velocity has to be integrated from it, so
+          uncorrected bias accumulates and the velocity estimate drifts. I tuned the filtering and
+          integration parameters against a commercial reference sensor.
+        </p>
+        <p>
+          The finished device tracked within 5% of the reference across the range we tested.
         </p>
       </div>
     </article>
@@ -148,16 +156,20 @@
         <p class="eyebrow">MIT Lab for Translational Engineering · Feb–Apr 2026</p>
         <h2>Wearable stimulator housing</h2>
         <p>
-          I designed and fabricated a clear SLA enclosure for an active stimulator carried on a live
-          animal through in-vivo trials. It had to be wearable, sealed against fluid, and transparent
-          enough to inspect the board without disassembly.
+          An active stimulator carried on a live animal through in-vivo trials needed an enclosure that
+          was wearable, sealed against fluid, and transparent enough to inspect the board without
+          disassembly.
         </p>
         <p>
-          Fluid ingress was the recurring failure, entering at the wire ports and the lid seam. Both were
-          tolerance problems: too loose admits fluid, too tight prevents the lid seating or cracks the
-          resin during assembly. I converged on dimensions that sealed and still assembled by hand across
-          roughly fifteen iterations, and contoured the base to the animal's back so the housing sat flat
-          and loaded the seam evenly. It stayed sealed throughout the trials.
+          I designed and fabricated it in clear SLA resin, contouring the base to the animal's back so the
+          housing sat flat and loaded the lid seam evenly. Fluid entered at the wire ports and the seam,
+          and both were tolerance problems: too loose admits fluid, too tight prevents the lid seating or
+          cracks the resin during assembly. I converged on dimensions that sealed and still assembled by
+          hand.
+        </p>
+        <p>
+          Fifteen iterations produced a housing that stayed sealed and functional through four in-vivo
+          trials.
         </p>
       </div>
     </article>
@@ -172,22 +184,28 @@
         <p class="eyebrow">Northeastern University · Jan–Mar 2025</p>
         <h2>Biomimetic fan blade</h2>
         <p>
-          I derived the blade geometry from owl wing structure for drone and HVAC use, adding ridges
-          across the blade surface that imitate the serrations on owl feathers.
+          The goal was to reduce the noise a fan generates for drone and HVAC applications without
+          sacrificing airflow.
         </p>
         <p>
-          My first prototypes were not quiet enough. I had sized the ridges by eye, and serration geometry
-          governs the effect far more than the presence of the feature does, so I selected amplitude and
-          wavelength from published parametric aeroacoustic data instead.
+          I derived the blade geometry from owl wing structure and added ridges across the surface that
+          imitate the serrations on owl feathers. My first prototypes were not quiet enough. I had sized
+          the ridges by eye, and serration geometry governs the effect far more than the presence of the
+          feature does, so I selected amplitude and wavelength from published parametric aeroacoustic
+          data instead.
         </p>
         <p>
           That data also corrected the mechanism I had assumed. The serrated surface does not break
           turbulence up. It establishes a localized pressure pattern that generates coherent vortex
-          structures persisting longer than ordinary turbulent eddies. At low speed these vortices 
-          periodically lift the airflow away from the blade surface, reducing the harmonic loading 
-          that produces tonal noise. At high speed they resist collapsing into the small dissipative 
-          eddies that produce broadband noise. Sizing the serrations accordingly reached a 30% noise 
-          reduction against a baseline blade in flow simulation.
+          structures persisting longer than ordinary turbulent eddies. At low speed these vortices
+          periodically lift the airflow away from the blade surface, reducing the harmonic loading that
+          produces tonal noise. At high speed they resist collapsing into the small dissipative eddies
+          that produce broadband noise. Serration density trades off between the two regimes, helping at
+          low Reynolds number and hurting at high.
+        </p>
+        <p>
+          Sizing the serrations accordingly, I reached a 30% noise reduction against a baseline blade in
+          flow simulation, a 40% improvement over my own first prototypes.
         </p>
         <p class="proj-note">
           Serration geometry informed by Wei et al., “Towards silent and efficient flight by combining
@@ -199,20 +217,23 @@
 
     <article class="proj proj-wide">
       <div class="proj-body">
-        <p class="eyebrow">MIT Lab for Translational Engineering · Mar-Jun 2026</p>
+        <p class="eyebrow">MIT Lab for Translational Engineering · 2026</p>
         <h2>Electro-thermal actuation study</h2>
         <p>
-          I characterized heater materials, cell chemistries, and shape-memory alloy springs to establish
-          whether a millimeter-scale actuator could be driven by a power source small enough to sit
-          alongside it.
+          The open question was whether a millimeter-scale actuator could be driven by a power source
+          small enough to sit alongside it.
         </p>
         <p>
-          My alloy activation temperatures came out inconsistent, but the inconsistency was patterned
-          rather than random, which pointed at the fixture rather than the material. The fixture was
-          adding friction that opposed the transition, so the alloy read as actuating later and more
-          weakly than it does. I rebuilt it and recovered valid data. I also mapped nichrome resistance
-          against power across several lengths and voltages and verified the results against Joule-heating
-          theory.
+          I characterized heater materials, cell chemistries, and shape-memory alloy springs to establish
+          the feasible envelope. My alloy activation temperatures came out inconsistent, but the
+          inconsistency was patterned rather than random, which pointed at the fixture rather than the
+          material. The fixture was adding friction that opposed the transition, so the alloy read as
+          actuating later and more weakly than it does. I rebuilt it.
+        </p>
+        <p>
+          The rebuilt fixture recovered valid activation data. I also mapped nichrome resistance against
+          power across several lengths and voltages and verified the results against Joule-heating
+          theory, which bounded the power envelope the actuator had to work within.
         </p>
       </div>
     </article>
@@ -222,14 +243,18 @@
         <p class="eyebrow">MIT Lab for Translational Engineering · Feb–Jun 2026</p>
         <h2>Cell delivery catheter</h2>
         <p>
-          A catheter for intravenous cell delivery was not achieving the expected flow. Working along the
-          central channel, I found a taper partway down its length acting as a bottleneck, and holding the
-          channel at a constant diameter restored flow in one redesign.
+          A catheter for intravenous cell delivery was not achieving the expected flow rate, which risks
+          shearing the cells it is meant to deliver intact.
         </p>
         <p>
-          I then manufactured the complete device sets the team ran experiments on: 40 assembled devices
-          and roughly 320 individual parts, produced on an SLA printer and a laser cutter with a rotary
-          axis to hold tolerance on the round features.
+          Working along the central channel, I found a taper partway down its length acting as a
+          bottleneck. I redesigned the channel to reduce the taper and the flow impedance it created,
+          holding a constant diameter through the length of the passage.
+        </p>
+        <p>
+          The redesign restored flow in a single revision. I then manufactured the complete device sets
+          the team ran experiments on: 42 assembled devices and 336 printed and machined parts, produced
+          on an SLA printer and a laser cutter with a rotary axis to hold tolerance on the round features.
         </p>
       </div>
     </article>
